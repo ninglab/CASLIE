@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CASLIE</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/icon.svg" style="width: 1.8em;vertical-align: middle;" alt="logo">
+              <span class="font-family: monospace;" style="vertical-align: middle;">CASLIE</span>
+            </h1>
+            <h2 class="title is-2 publication-title">Captions Speak Louder than Images:</h2>
+            <h3 class="subtitle is-3 publication-subtitle">Generalizing Foundation Models for E-commerce from
+              High-quality Multimodal Instruction Data</h3>
+            <!-- <div class="is-size-5 publication-authors"> -->
+            <!-- Paper authors -->
+            <!-- <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span>
+                  </div> -->
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">The Ohio State University
+                <!-- <br>Conferance name and year -->
+              </span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/huggingface.svg" width="85%">
+                    </span>
+                    <span>Model</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/huggingface.svg" width="85%">
+                      <!-- <p style="font-size: 18px;">🤗</p> -->
+                      <!-- <i class="fas fa-file-pdf"></i> -->
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="fab fa-github"></i> -->
+                      <img src="static/images/github-white.svg" width="88%">
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="ai ai-arxiv"></i> -->
+                      <img src="static/images/arxiv.svg" width="78%">
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <!-- Leveraging multimodal data to drive breakthroughs in e-commerce applications through Multimodal Foundation Models (MFMs) is gaining increasing attention from the research community. However, there are significant challenges that hinder the optimal use of multimodal e-commerce data by foundation models: (1) the scarcity of large-scale, high-quality multimodal benchmark datasets; and (2) the lack of effective multimodal information integration methods. To address these challenges, in this paper, we introduce <span style="font-family: monospace;">MMECInstruct</span>, the first-ever, large-scale, and high-quality multimodal instruction dataset %for developing and evaluating foundation models for e-commerce. We also develop <span style="font-family: monospace;">CASLIE</span>, a simple, lightweight, yet effective framework for integrating multimodal information for e-commerce. Leveraging <span style="font-family: monospace;">MMECInstruct</span>, we fine-tune a series of e-commerce MFMs within <span style="font-family: monospace;">CASLIE</span>, denoted as <span style="font-family: monospace;">CASLIE</span> models. Our comprehensive evaluation demonstrates that <span style="font-family: monospace;">CASLIE</span> models substantially outperform 5 categories of advanced baseline models in the in-domain evaluation. Moreover, <span style="font-family: monospace;">CASLIE</span> models show strong generalizability to out-of-domain settings. -->
+              Leveraging multimodal data to drive breakthroughs in e-commerce applications through Multimodal Foundation
+              Models (MFMs) is gaining increasing attention from the research community. However, there are significant
+              challenges that hinder the optimal use of multimodal e-commerce data by foundation models: (1) the
+              scarcity of large-scale, high-quality multimodal benchmark datasets; and (2) the lack of effective
+              multimodal information integration methods. To address these challenges, in this paper, we introduce
+              MMECInstruct the first-ever, large-scale, and high-quality multimodal instruction dataset %for developing
+              and evaluating foundation models for e-commerce. We also develop CASLIE, a simple, lightweight, yet
+              effective framework for integrating multimodal information for e-commerce. Leveraging MMECInstruct we
+              fine-tune a series of e-commerce MFMs within CASLIE, denoted as CASLIE models. Our comprehensive
+              evaluation demonstrates that CASLIE models substantially outperform 5 categories of advanced baseline
+              models in the in-domain evaluation. Moreover, CASLIE models show strong generalizability to out-of-domain
+              settings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="hero is-small is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Overview</h2>
+      <div style="text-align: center;">
+        <!-- <div style="margin-right: 20px; width: 50%; display: inline-block;">
+          <img src="static/images/dataset.svg" alt="Overview Dataset"
+          style="width: 65%;">
+          <h3 class="title is-5">MMECInstruct Overview</h3>
+        </div>
+        <div style="margin-left: 20px; width: 50%; display: inline-block;">
+          <img src="static/images/caslie.svg" alt="Overview">
+          <h3 class="title is-5">CASLIE Overview</h3>
+        </div> -->
+      <img src="static/images/dataset.svg" alt="Overview Dataset"
+        style="width: 65%; margin-right: 20px;">
+      <img src="static/images/caslie.svg" alt="Overview"
+        style="margin-left: 20px;">
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="hero is-small is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Table</h2>
+        <!-- <div style="align-items: center;"> -->
+        <!-- <iframe src="static/tables/main.html" style="border:none;"></iframe> -->
+        <table cellpadding="0" cellspacing="0" style="border-spacing: 15px; border-collapse: separate;">
+          <thead>
+            <tr>
+              <th rowspan="3" class="sticky no-border-right">Model</th>
+              <th colspan="7" class="no-border-right">IND</th>
+              <th colspan="5" class="no-border-right">OOD</th>
+            </tr>
+            <tr>
+              <th>AP</th>
+              <th>CC</th>
+              <th>PRP</th>
+              <th>PSI</th>
+              <th>MPC</th>
+              <th>SA</th>
+              <th>SR</th>
+              <th>AP</th>
+              <th>CC</th>
+              <th>PRP</th>
+              <th>SA</th>
+              <th>SR</th>
+            </tr>
+            <tr>
+              <th>F1</td>
+              <th>R@1</td>
+              <th>M-F1</td>
+              <th>F1</td>
+              <th>Acc</td>
+              <th>M-F1</td>
+              <th>R@1</td>
+              <th>F1</td>
+              <th>R@1</td>
+              <th>M-F1</td>
+              <th>M-F1</td>
+              <th>R@1</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky no-border-right">FashionCLIP</td>
+              <td>0.759</td>
+              <td>0.863</td>
+              <td>0.497</td>
+              <td>0.201</td>
+              <td>0.605</td>
+              <td>0.323</td>
+              <td>0.145</td>
+              <td>0.600</td>
+              <td>0.903</td>
+              <td>0.453</td>
+              <td>0.376</td>
+              <td>0.087</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">Llama-2-13B</td>
+              <td>0.866</td>
+              <td>0.969</td>
+              <td>0.468</td>
+              <td>0.235</td>
+              <td>0.700</td>
+              <td>0.628</td>
+              <td>0.184</td>
+              <td>0.831</td>
+              <td>0.959</td>
+              <td>0.523</td>
+              <td>0.595</td>
+              <td>0.285</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">Mistral-7B-v0</td>
+              <td>0.876</td>
+              <td>0.971</td>
+              <td>0.533</td>
+              <td>0.312</td>
+              <td>0.725</td>
+              <td>0.617</td>
+              <td>0.218</td>
+              <td>0.847</td>
+              <td>0.965</td>
+              <td>0.530</td>
+              <td>0.659</td>
+              <td>0.312</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">Llama-3</td>
+              <td>0.866</td>
+              <td>0.951</td>
+              <td>0.493</td>
+              <td>0.270</td>
+              <td>0.699</td>
+              <td>0.565</td>
+              <td>0.191</td>
+              <td>0.838</td>
+              <td>0.962</td>
+              <td>0.511</td>
+              <td>0.614</td>
+              <td>0.305</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">eCeLLM-L</td>
+              <td>0.872</td>
+              <td>0.870</td>
+              <td>0.519</td>
+              <td>0.178</td>
+              <td>0.706</td>
+              <td>0.613</td>
+              <td>0.188</td>
+              <td>0.860</td>
+              <td>0.916</td>
+              <td>0.531</td>
+              <td>0.584</td>
+              <td>0.304</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">eCeLLM-M</td>
+              <td>0.864</td>
+              <td>0.890</td>
+              <td>0.492</td>
+              <td>0.131</td>
+              <td>0.719</td>
+              <td>0.632</td>
+              <td>0.182</td>
+              <td>0.841</td>
+              <td>0.942</td>
+              <td>0.564</td>
+              <td>0.624</td>
+              <td>0.302</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">LLaVA-NExT-Interleave</td>
+              <td>0.791</td>
+              <td>0.964</td>
+              <td>0.568</td>
+              <td>0.340</td>
+              <td>0.721</td>
+              <td>0.561</td>
+              <td>0.053</td>
+              <td>0.579</td>
+              <td>0.043</td>
+              <td>0.334</td>
+              <td>0.206</td>
+              <td>0.000</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">SoTA</td>
+              <td>0.868</td>
+              <td>0.671</td>
+              <td>0.531</td>
+              <td>0.316</td>
+              <td>0.702</td>
+              <td>0.495</td>
+              <td>0.163</td>
+              <td>0.849</td>
+              <td>0.658</td>
+              <td>0.447</td>
+              <td>0.510</td>
+              <td>0.210</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">CASLIE-L</td>
+              <td>0.868</td>
+              <td>0.969</td>
+              <td>0.473</td>
+              <td>0.268</td>
+              <td>0.706</td>
+              <td>0.651</td>
+              <td>0.190</td>
+              <td>0.840</td>
+              <td>0.968</td>
+              <td>0.531</td>
+              <td>0.607</td>
+              <td>0.297</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">CASLIE-M</td>
+              <td>0.891</td>
+              <td>0.979</td>
+              <td>0.566</td>
+              <td>0.398</td>
+              <td>0.731</td>
+              <td>0.656</td>
+              <td>0.223</td>
+              <td>0.855</td>
+              <td>0.977</td>
+              <td>0.585</td>
+              <td>0.625</td>
+              <td>0.330</td>
+            </tr>
+            <tr>
+              <td class="sticky no-border-right">CASLIE-S</td>
+              <td>0.871</td>
+              <td>0.963</td>
+              <td>0.504</td>
+              <td>0.336</td>
+              <td>0.707</td>
+              <td>0.601</td>
+              <td>0.196</td>
+              <td>0.857</td>
+              <td>0.959</td>
+              <td>0.580</td>
+              <td>0.647</td>
+              <td>0.297</td>
+            </tr>
+          </tbody>
+        </table>
+      <!-- </div> -->
+    </div>
+    </div>
+    </section>
+  
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
