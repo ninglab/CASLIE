@@ -27,16 +27,16 @@ else:
     
 def main(
     load_8bit: bool = False,
-    model_name: str = "NingLab/CASLIE-M",
+    model_path: str = "NingLab/CASLIE-M",
     prompt_template: str = "mistral",
     task: str = "",
-    output_data_path: str = ""
+    output_path: str = ""
 ):
     prompter = Prompter(prompt_template)
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     if device == "cuda":
         model = AutoModelForCausalLM.from_pretrained(
-            model_name,
+            model_path,
             load_in_8bit=load_8bit,
             torch_dtype=torch.bfloat16,
             device_map="auto",
@@ -88,7 +88,7 @@ def main(
         results.extend(batch_results)
         print(f"Finished processing batch {i // max_batch_size + 1}. Time taken: {time.time() - start_time:.2f} seconds")
 
-    with open(output_data_path, 'w') as f:
+    with open(output_path, 'w') as f:
         json.dump(results, f)
 
 def evaluate(prompter, prompts, tokenizer, pipe, batch_size):

@@ -3,9 +3,12 @@ from PIL import Image
 from tqdm import tqdm
 import torch
 import os
-from transformers import Blip2Processor, Blip2ForConditionalGeneration, AutoConfig, AutoProcessor, LlavaForConditionalGeneration, LlavaNextProcessor, LlavaNextForConditionalGeneration, AutoModelForPreTraining, MllamaForConditionalGeneration
+from transformers import Blip2Processor, Blip2ForConditionalGeneration, AutoConfig, AutoProcessor, LlavaForConditionalGeneration, LlavaNextProcessor, LlavaNextForConditionalGeneration, MllamaForConditionalGeneration
+import argparse
+from datasets import load_dataset
+import pandas as pd
 
-from utils.template import *
+from template import *
 
 def get_captions(data, spl, task, model_name='llama'):
     fp = f'captions/{task}_{spl}.json'
@@ -167,3 +170,16 @@ def caption_llama(data):
         captions.append(generated_caps)
 
     return captions    
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-t','--task', default='answerability_prediction')
+    parser.add_argument('-spl','--split', default='test')
+    parser.add_argument('-cm','--captioning_model', default='llama')
+    args = parser.parse_args()
+    print(args)
+
+    df_data = pd.DataFrame(load_dataset("NingLab/MMECInstruct")['train'])
+    df_data = df_data[(df_data['task'] == args.task) & (df_data['split'] == args.split)]
+    data = df_data.to_dict(orient='records')
+    get_captions(data, args.split, args.task, args.captioning_model)
